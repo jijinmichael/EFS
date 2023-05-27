@@ -38,5 +38,18 @@ EFS offers a simple and scalable file storage solution that can be accessed by m
               │      A        │               │      B        │
               └───────────────┘               └───────────────┘
 
+Let's see how can we creat a simple EFS in AWS.
+
+Go to AWS console >> EFS >> Create File System.
+
+Enter the name and select the VPC. Click on the Customized option and make the changes as below.
+
+![image](https://github.com/jijinmichael/EFS/assets/134680540/05ab38ba-b349-4c3f-949e-da23081ce719)
+
+![image](https://github.com/jijinmichael/EFS/assets/134680540/9e22b0da-67cf-4d59-b76a-f14d1cec61ee)
+
+Please note that on the Network option, select the VPC and make sure the Availability zone's security group must opened the port **2049**.
+
+
 
 
