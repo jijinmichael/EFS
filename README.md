@@ -27,12 +27,12 @@ EFS offers a simple and scalable file storage solution that can be accessed by m
               │ Availability  │               │ Availability  │
               │    Zone A     │               │    Zone B     │
               └──────┬────────┘               └──────┬────────┘
-                     │                                │
+                     │                               │
               ┌──────▼────────┐               ┌──────▼────────┐
               │   EFS File    │               │   EFS File    │
               │    System     │               │    System     │
               └──────┬────────┘               └──────┬────────┘
-                     │                                │
+                     │                               │
               ┌──────▼────────┐               ┌──────▼────────┐
               │  EC2 Instance │               │  EC2 Instance │
               │      A        │               │      B        │
