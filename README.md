@@ -50,6 +50,25 @@ Enter the name and select the VPC. Click on the Customized option and make the c
 
 Please note that on the Network option, select the VPC and make sure the Availability zone's security group must opened the port **2049**.
 
+Then create an Instance and ssh to the same and install a package called efs to mout the EFS. This will be the master template for the instance. 
+
+In this example I'm creating an Instance with AMI Amazon Linux.
+
+Once it is created ssh to the machine.
+```
+#ssh -i keypair ec2-user@Public IP or Public DNS
+[ec2-user@ip-172-31-15-100 ~]$ sudo yum install amazon-efs-utils -y
+```
+For testing purpose we need to put some file to the doc root of the apache server. So I'm installing apache and php to the master instance.
+```
+[ec2-user@ip-172-31-15-100 ~]$ sudo yum install httpd php -y
+[ec2-user@ip-172-31-15-100 ~]$ sudo systemctl restart httpd php-fpm 
+[ec2-user@ip-172-31-15-100 ~]$ sudo systemctl enable httpd php-fpm
+```
+
+
+
+
 
 
 
