@@ -94,6 +94,7 @@ Now upload or clone some web content to the doc root and change its ownership.
 [ec2-user@ip-172-31-15-100 ~]$ sudo chown -R apache:apache /var/www/html/*
 ```
 
+### 
 
 
 
