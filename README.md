@@ -94,7 +94,13 @@ Now upload or clone some web content to the doc root and change its ownership.
 [ec2-user@ip-172-31-15-100 ~]$ sudo chown -R apache:apache /var/www/html/*
 ```
 
-### 
+### Mount the file system on the EC2 instance which is created by Auto Scaling Group
+
+Here we are going to see how we can mount the above EFS to an ASG created Instances.
+
+For this we need to create a Launch Configuration.
+
+Since I have taken Amazon Linux in the previous section, under the LC AMI choose the same AMI ID.
 
 
 
