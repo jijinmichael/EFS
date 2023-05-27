@@ -16,8 +16,8 @@ It is designed to provide scalable and elastic storage for applications and work
                    └──────────┬───────┘
                               │
                 ┌─────┬──────▼───────┬─────┐
-                │ EC2 │   EC2 │   EC2 │ EC2│
-                │  A  │    B  │   C   │  D │
+                │ EC2 │   EC2│   EC2 │ EC2 │
+                │  A  │    B │   C   │  D  │
                 └─────┴──────┴───────┴─────┘
 
 
