@@ -102,6 +102,33 @@ For this we need to create a Launch Configuration.
 
 Since I have taken Amazon Linux in the previous section, under the LC AMI choose the same AMI ID.
 
+On the Advance details, write down the user data as follows. Please chnage the fs-ID according to yours.
+```
+#!/bin/bash
+
+yum install amazon-efs-utils httpd php  -y
+echo "fs-0e668d3aef007a870:/    /var/www/html/  efs  defaults,_netdev  0  0"  >> /etc/fstab
+mount -a
+systemctl restart httpd php-fpm
+systemctl enable httpd php-fpm
+```
+Then create an Auto Scaling Group with the LC which we created above. Now the newly deployed instance will have the same web doc root and its contents of the master instance.
+
+To check this login to the newly created instance and type the below command.
+```
+[ec2-user@ip-172-31-39-135 ~]$ df -Th
+Filesystem                                          Type      Size  Used Avail Use% Mounted on
+devtmpfs                                            devtmpfs  4.0M     0  4.0M   0% /dev
+tmpfs                                               tmpfs     475M     0  475M   0% /dev/shm
+tmpfs                                               tmpfs     190M  2.9M  188M   2% /run
+/dev/xvda1                                          xfs       8.0G  1.6G  6.4G  20% /
+tmpfs                                               tmpfs     475M     0  475M   0% /tmp
+/dev/xvda128                                        vfat       10M  1.3M  8.7M  13% /boot/efi
+fs-0e668d3aef007a870.efs.ap-south-1.amazonaws.com:/ nfs4      8.0E  5.0M  8.0E   1% /var/www/html
+tmpfs                                               tmpfs      95M     0   95M   0% /run/user/1000
+```
+
+
 
 
 
