@@ -65,8 +65,29 @@ For testing purpose we need to put some file to the doc root of the apache serve
 [ec2-user@ip-172-31-15-100 ~]$ sudo systemctl restart httpd php-fpm 
 [ec2-user@ip-172-31-15-100 ~]$ sudo systemctl enable httpd php-fpm
 ```
+After this we need to mount the file system to the instance. 
+```
+[ec2-user@ip-172-31-15-100 ~]$ sudo vim /etc/fstab
+```
+Then add an entry like below in fstab. Please change the fs-ID according to yours.
 
+![image](https://github.com/jijinmichael/EFS/assets/134680540/d30b83d9-b885-434a-bc6a-45a23e2d628a)
 
+Then follow the below steps to mount and verify.
+```
+[ec2-user@ip-172-31-15-100 ~]$ sudo mount -a
+[ec2-user@ip-172-31-15-100 ~]$ df -Th
+Filesystem                                          Type      Size  Used Avail Use% Mounted on
+devtmpfs                                            devtmpfs  4.0M     0  4.0M   0% /dev
+tmpfs                                               tmpfs     475M     0  475M   0% /dev/shm
+tmpfs                                               tmpfs     190M  2.8M  188M   2% /run
+/dev/xvda1                                          xfs       8.0G  1.6G  6.4G  20% /
+tmpfs                                               tmpfs     475M     0  475M   0% /tmp
+tmpfs                                               tmpfs      95M     0   95M   0% /run/user/1000
+/dev/xvda128                                        vfat       10M  1.3M  8.7M  13% /boot/efi
+fs-0e668d3aef007a870.efs.ap-south-1.amazonaws.com:/ nfs4      8.0E     0  8.0E   0% /var/www/html
+```
+Now I'm cloning 
 
 
 
