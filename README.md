@@ -10,20 +10,7 @@ It is designed to provide scalable and elastic storage for applications and work
 
 EFS offers a simple and scalable file storage solution that can be accessed by multiple instances within the same AWS region. It provides a file system interface, which means you can mount EFS to your instances using standard file system commands. This makes it easy to migrate existing applications that rely on traditional file systems to the cloud without modifying your application code.
 
-              ┌───────────────┐               ┌───────────────┐
-              │ Availability  │               │ Availability  │
-              │    Zone A     │               │    Zone B     │
-              └──────┬────────┘               └──────┬────────┘
-                     │                               │
-              ┌──────▼────────┐               ┌──────▼────────┐
-              │   EFS File    │               │   EFS File    │
-              │    System     │               │    System     │
-              └──────┬────────┘               └──────┬────────┘
-                     │                               │
-              ┌──────▼────────┐               ┌──────▼────────┐
-              │  EC2 Instance │               │  EC2 Instance │
-              │      A        │               │      B        │
-              └───────────────┘               └───────────────┘
+![EFS_2 (1)](https://github.com/jijinmichael/EFS/assets/134680540/c3158d1c-a4a1-4a1e-9df3-bbe58ec683be)
 
 Let's see how can we creat a simple EFS in AWS.
 
