@@ -7,7 +7,7 @@ EFS uses the NFSv4 protocol for its file system structure which mirrors the stan
 It is designed to provide scalable and elastic storage for applications and workloads that require shared file storage accessible from multiple instances simultaneously.
 
 <p align="center">
-  <img src="https://github.com/jijinmichael/EFS/assets/134680540/9914a85d-b839-45f3-834e-bff1ffa27524"/>
+  <img src="https://github.com/jijinmichael/EFS/assets/134680540/e2302d19-e20f-49f8-aaee-af012523e2c1"/>
   </p>
 
 EFS offers a simple and scalable file storage solution that can be accessed by multiple instances within the same AWS region. It provides a file system interface, which means you can mount EFS to your instances using standard file system commands. This makes it easy to migrate existing applications that rely on traditional file systems to the cloud without modifying your application code.
