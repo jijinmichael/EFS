@@ -92,6 +92,9 @@ systemctl enable httpd php-fpm
 ```
 Then create an Auto Scaling Group with the LC which we created above. Now the newly deployed instance will have the same web doc root and its contents of the master instance.
 
+<p align="center">
+  <img src="https://github.com/jijinmichael/EFS/assets/134680540/7bd65d1f-9065-467e-ab8e-e3e55c0c232a"></p>
+
 To check this login to the newly created instance and type the below command.
 ```
 [ec2-user@ip-172-31-39-135 ~]$ df -Th
