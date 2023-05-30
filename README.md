@@ -67,7 +67,7 @@ fs-0e668d3aef007a870.efs.ap-south-1.amazonaws.com:/ nfs4      8.0E     0  8.0E  
 ```
 Now upload or clone some web content to the doc root and change its ownership.
 ```
-[ec2-user@ip-172-31-15-100 ~]$ sudo git clone https://github.com/Fujikomalan/aws-elb-site.git  /var/website/ 
+[ec2-user@ip-172-31-15-100 ~]$ sudo git clone https://github.com/jijinmichael/AWS-ELB-Site.git  /var/website/ 
 [ec2-user@ip-172-31-15-100 ~]$ sudo cp -r /var/website/*  /var/www/html/
 [ec2-user@ip-172-31-15-100 ~]$ sudo chown -R apache:apache /var/www/html/*
 ```
