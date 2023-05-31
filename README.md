@@ -80,6 +80,8 @@ For this we need to create a Launch Configuration.
 
 Since I have taken Amazon Linux in the previous section, under the LC AMI choose the same AMI ID.
 
+![image](https://github.com/jijinmichael/EFS/assets/134680540/82abfe69-04d0-4ed0-9b37-4ac874e5aa2e)
+
 On the Advance details, write down the user data as follows. Please chnage the fs-ID according to yours.
 ```
 #!/bin/bash
